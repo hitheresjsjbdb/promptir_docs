@@ -53,3 +53,13 @@ python test.py --ckpt_name epoch=139-step=431060-v1.ckpt --input_image Derain/Ra
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH}"
 export LD_PRELOAD="$CONDA_PREFIX/lib/libstdc++.so.6:${LD_PRELOAD}"
 ```
+之后使用上面的命令进行推理即可
+## git简要说明
+
+```bash
+git status #查看修改了哪些文件
+git add . #将修改文件添加到暂存区
+git add 文件名 #或者只添加某个文件
+git commit -m "简要说明你做了什么修改" #提交修改
+git push #推送到github
+```
