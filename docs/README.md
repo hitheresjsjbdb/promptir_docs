@@ -41,3 +41,15 @@ conda activate /data1/user23004/promptir
 python test.py --ckpt_name epoch=139-step=431060-v1.ckpt --input_image Derain/Rain100L/rainy/rain-013.png --output_dir output/single/
 ```
 其中，--ckpt_name 后面是模型路径；--input_image 后是输入图片，可以根据实际情况进行修改；--output_dir 后是输出图片路径，可以根据实际情况进行修改。即可完成单图推理。
+
+## 3.端侧使用方法（简写）
+首先进入系统后，进入路径并激活虚拟环境：
+```bash
+/home/nvidia/PromptIR_os&&conda activate promptir_env
+```
+
+由于SciPy需要的包的路径问题，需要提前配置环境变量：
+```bash
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH}"
+export LD_PRELOAD="$CONDA_PREFIX/lib/libstdc++.so.6:${LD_PRELOAD}"
+```
